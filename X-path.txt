@@ -1,4 +1,4 @@
-1. Залогиниться в системе
+1. Login system
 Page http://v3.test.itpmgroup.com/login 
 
 EmailField xPath='.//div[1]/input';
@@ -6,7 +6,7 @@ PasswordField id='password';
 EnterButton xPath='.//button';
 GreatingHeader xPath='.//h3'
 
-2. Перейти в подраздел Стороны сделок
+2. Go to the deal sides section
 Page http://v3.test.itpmgroup.com/
 
 SlovarySection id='dictionary'
@@ -14,7 +14,7 @@ SectionPull xPath='.//i[2]'
 DealSidesSubSection id='prov_cus'
 DealSidesHeader xPath='.//h1[contains(text(),'Стороны сделок')]'
 
-3. Создать нового клиента
+3. Create new customer
 Page http://v3.test.itpmgroup.com/dictionary/providers
 
 DealSidesHeader xPath='.//h1[contains(text(),'Стороны сделок')]'
@@ -26,7 +26,7 @@ ProcustPhone id='prov_cus_proCustPhone'
 PrivatePersonCheckbox id='prov_cus_proCustIsFl'
 AddButton name='add'
 
-4. Создать сделку с созданным клиентом
+4. Create a deal with the new customer
 
 DealsSection id='deal'
 DealsHeader xPath='.//[@class='content-header']/h1'
@@ -42,7 +42,7 @@ CustomerField id='deal_customer'
 ProviderField id='deal_provider'
 AddButton name='add'
 
-5. Добавить запчасть в сделку
+5. Add spare to the deal
 
 DeviceListRow xPath='.//*[@id='device_list']//tr[2]'
 AddElement data-original-title='Add'
