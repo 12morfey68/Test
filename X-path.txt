@@ -1,0 +1,53 @@
+1. Залогиниться в системе
+Page http://v3.test.itpmgroup.com/login 
+
+EmailField xPath='.//div[1]/input';
+PasswordField id='password';
+EnterButton xPath='.//button';
+GreatingHeader xPath='.//h3'
+
+2. Перейти в подраздел Стороны сделок
+Page http://v3.test.itpmgroup.com/
+
+SlovarySection id='dictionary'
+SectionPull xPath='.//i[2]'
+DealSidesSubSection id='prov_cus'
+DealSidesHeader xPath='.//h1[contains(text(),'Стороны сделок')]'
+
+3. Создать нового клиента
+Page http://v3.test.itpmgroup.com/dictionary/providers
+
+DealSidesHeader xPath='.//h1[contains(text(),'Стороны сделок')]'
+AddElement data-original-title='Add'
+EditingHeader xPath='//*[@class='box-title' and contains(text(),'Редактирование')]'
+ProcustName id='prov_cus_proCustName'
+ProcustAddress id='prov_cus_proCustAddress'
+ProcustPhone id='prov_cus_proCustPhone'
+PrivatePersonCheckbox id='prov_cus_proCustIsFl'
+AddButton name='add'
+
+4. Создать сделку с созданным клиентом
+
+DealsSection id='deal'
+DealsHeader xPath='.//[@class='content-header']/h1'
+AddElement data-original-title='Add'
+EditingHeader xPath='//*[@class='box-title' and contains(text(),'Редактирование')]'
+DealDateDay id='deal_dealDate_date_day'
+DealDateMonth id='deal_dealDate_date_month'
+DealDateYear id='deal_dealDate_date_year'
+DealDateTimeHour id='deal_dealDate_time_hour'
+DealDateTimeMinute id='deal_dealDate_time_minute'
+DealTypeField id='deal_dealType'
+CustomerField id='deal_customer'
+ProviderField id='deal_provider'
+AddButton name='add'
+
+5. Добавить запчасть в сделку
+
+DeviceListRow xPath='.//*[@id='device_list']//tr[2]'
+AddElement data-original-title='Add'
+SpareCountField id='spare_operation_spareCount'
+SpareDealField id='spare_operation_deal'
+SpareField id='spare_operation_spare'
+AddButton name='add'
+DealDeviceListRow xPath='.//*[@id='device_list']//tr[1]'
